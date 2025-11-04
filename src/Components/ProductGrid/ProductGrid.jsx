@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
-import "./ProductGrid.css";
+import "./Product-Grid.css";
 import pic from "../../assets/image1.png";
 import pic1 from "../../assets/winebag.png";
 import pic2 from "../../assets/backside.png";
