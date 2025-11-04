@@ -1,0 +1,254 @@
+.Header {
+  padding-inline: 104px;
+  padding-block: 20px;
+   animation: fadeIn 1s ease-in;
+   cursor: pointer;
+   position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  display: block;
+  background-color: #FAFAFB;
+}
+
+.top-menu {
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+   font-family: "proxima niva" , sans-serif;
+}
+
+.Lang {
+  gap: 13px;
+}
+
+.about {
+  gap: 1.8rem;
+}
+
+.cart {
+  position: relative;
+  height: 20px;
+  width: 25px;
+}
+
+.cartcount {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: white;
+  background-color: #FB7181;
+  border: 2px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -7px;
+  left: 10px;
+  font-size: 10px;
+}
+
+.profile {
+  gap: 7px;
+}
+
+.amnt {
+  color: rgb(117, 117, 117);
+}
+.navlinks {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.links {
+  margin-left: auto;
+  display: flex;
+  gap: 6.2rem;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+li:hover {
+  color: rgba(64, 191, 255, 0.9);
+}
+
+.nav-item {
+  position: relative;
+}
+
+/* Hide dropdown by default */
+.dropdown-menu {
+    position: fixed;
+  top: 140px; 
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 49px;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 200px;
+  width: 60%;
+  z-index: 100;
+}
+
+/* Show on hover */
+.navlinks:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+ transform: translateX(-50%) translateY(0);
+}
+
+.hover-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fits {
+  display: flex;
+  gap: 50px;
+}
+
+.category h1 {
+  margin-bottom: 13px;
+font-weight: 500;
+font-size: 22px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #C1C8CE;
+}
+
+.category ul {
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+display: flex;
+flex-direction: column;
+gap: 14px;
+}
+
+
+
+/* Hamburger Menu - Hidden by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #22262A;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 1100px) {
+  .links {
+    gap: 60px;
+  }
+}
+
+
+/* Media Query for mobile */
+@media (max-width: 900px) {
+  /* Show hamburger */
+  .Header {
+    padding-inline: 60px;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  /* Navigation links styling for mobile */
+  .links {
+    margin-left: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 30px 30px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    gap: 20px;
+      transform: translateX(100%);
+  }
+
+  /* Show menu when active */
+  .links.active {
+      transform: translateX(0);
+  }
+
+  .links li {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .links li a {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+  }
+
+  /* Overlay behind menu */
+  .links.active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+
+@media (max-width: 585px) {
+.top-menu {
+  display: none;
+}
+}
+
+@media (max-width: 400px) {
+  .Header {
+    padding-inline: 20px;
+  }
+}

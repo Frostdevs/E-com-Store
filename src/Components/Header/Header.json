@@ -1,0 +1,14 @@
+{
+  "language": "FR",
+  "currency": "EUR",
+  "myProfile": "Mon profil",
+  "items": "articles",
+  "cartTotal": "0,00 €",
+  "nav": {
+    "home": "ACCUEIL",
+    "bag": "SAC",
+    "sneakers": "BASKETS",
+    "belt": "CEINTURE",
+    "contact": "CONTACT"
+  }
+}

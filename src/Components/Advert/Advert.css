@@ -1,0 +1,137 @@
+.Advert {
+background-color: rgba(64, 191, 255, 1);
+color: white;
+align-items: center;
+padding-block: 168.72px;
+margin-top: 90.83px;
+position: relative;
+ animation: fadeIn 1s ease-in;
+}
+
+.advertpic {
+    position: absolute;
+    right: 16.22px;
+    bottom: 92.3px;
+    height: 560px;
+    width: 700px;
+}
+
+.Advertcont {
+margin-left: 108px;
+max-width: 592px;
+width: 100%;
+}
+
+.Advertcont h1 {
+font-weight: 500;
+font-size: 55px;
+line-height: 120%;
+letter-spacing: 0%;
+}
+
+.Advertcont p {
+font-weight: 400;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+margin-top: 25px;
+}
+
+.Advertcont h4 {
+font-weight: 600;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+margin-top: 12.11px;
+}
+
+.line {
+  display: block;      
+  height: 3px;         
+  width: 75px;         
+  background-color: white; 
+  margin: 4px 0;    
+}
+
+.shop {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.shop:hover {
+    color: rgba(225, 225, 225, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1300px) {
+  .advertpic {
+    bottom: 0;
+     height: 500px;
+  width: 500px;
+  }
+  .Advertcont p {
+width: 380px;
+  }
+}
+@media (max-width: 1250px) {
+  .advertpic {
+    bottom: 0;
+     height: 500px;
+  width: 500px;
+  }
+  .Advertcont p {
+width: 380px;
+  }
+}
+
+
+@media (max-width: 768px) {
+.Advert {
+ height: 561px;
+padding-block: 60px;
+    padding-inline: 20px;
+}
+.advertpic {
+  height: 350px;
+  width: 350px;
+  bottom: 0;
+}
+.Advertcont {
+  margin-left: 0;
+}
+}
+
+
+@media (max-width: 600px) {
+
+  .Advert {
+    padding-block: 60px;
+    padding-inline: 15px;
+    height: 653.53px;
+  }
+
+
+.Advertcont h1, .Advertcont p , .Advertcont h4 {
+  width: 100%;
+}
+
+.Advertcont p {
+  font-size: 16px;
+}
+.Advertcont h4 {
+  margin-top: 40px;
+}
+
+.advertpic {
+  height: 300px;
+  width: 250px;
+  bottom: 0;
+}
+}
+

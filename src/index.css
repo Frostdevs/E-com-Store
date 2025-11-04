@@ -1,0 +1,9 @@
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "proxima nova";
+  src: url("./fonts/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,46 @@
+
+.search-bar {
+    display: flex;
+    width: 650px;
+    margin-inline: auto;
+    margin-bottom: 95.41px;
+    animation: fadeIn 1s ease-in;
+}
+
+.search-bar input{
+width: 100%;
+padding-left: 21px;
+padding-top: 23px;
+padding-bottom: 19px;
+border: 2px rgba(188, 221, 254, 1) solid;
+background: transparent;
+outline: none;
+}
+
+.search-bar input::placeholder {
+font-family: "Proxima Nova";
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+
+.search-bar button {
+    color: white;
+font-weight: 600;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+padding-block: 17px;
+padding-inline: 27.5px;
+background-color: rgba(64, 191, 255, 1);
+cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+.search-bar {
+    width: 90%;
+    margin-inline: auto;
+}
+}

@@ -1,0 +1,130 @@
+footer {
+  background-color: rgba(188, 221, 254, 1);
+  width: 100%;
+  padding-top: 150px;
+   animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footcont {
+     width: 80%;
+  margin: 0 auto;
+}
+
+.headcont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lilabout p {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: rgba(34, 38, 42, 1);
+  margin-top: 16px;
+}
+
+.follow p {
+     font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: rgba(34, 38, 42, 1);
+  margin-top: 19.27px;
+}
+
+.socials {
+    margin-top: 22px;
+}
+
+.mid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 65px;
+}
+
+.contact h3 {
+    font-family: "Poppins";
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+letter-spacing: 0%;
+margin-top: 19.27px;
+}
+
+.firs h4 {
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+
+.quicklinks {
+    margin-top: 30px;
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: rgba(38, 38, 38, 1);
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.stline {
+    height: 1.17px;
+    background-color: rgba(246, 247, 248, 1);
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.last {
+padding-top: 30px;
+padding-block: 54px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.last p {
+    font-family: "Proxima Nova";
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: rgba(193, 200, 206, 1);
+}
+
+.rands {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .headcont {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .mid {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .last {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

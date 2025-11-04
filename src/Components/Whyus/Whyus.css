@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.whyUs {
+  padding-block: 98px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 164px;
+  animation: fadeIn 1s ease-in;
+}
+
+.whyUs h1 {
+font-weight: 600;
+font-size: 34px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+margin-bottom: 72px;
+}
+
+.services h4 {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(34, 38, 42, 1);
+  margin-top: 54px;
+}
+
+.services p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(34, 38, 42, 1);
+  margin-top: 12px;
+}
+
+.services img {
+  width: 50px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.services {
+  width: 200px;
+  align-items: center;
+  text-align: center;
+}
+
+.whycont {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1250px) {
+  .whycont {
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+/* .whyUs {
+  padding-inline: 30px;
+}
+.services h4 {
+  font-size: 20px;
+}
+.services p {
+font-size: 14px;
+} */
+}
+
+@media (max-width: 615px) {
+
+.whyUs h1 {
+  width: 100%;
+}
+
+.whyUs {
+  padding-inline: 5%;
+}
+.services h4 {
+  font-size: 24px;
+}
+.services p {
+font-size: 18px;
+}
+}
+

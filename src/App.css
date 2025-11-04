@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "proxima nova";
+  src: url("./fonts/Demo_Fonts/Fontspring-DEMO-proximanova-regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  font-family: "poppins";
+  width: 100%;
+}
+
+.display {
+  background-image: url("./assets/Promotion\ Image\ \(1\).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  animation: fadeIn 1s ease-in;
+}
+
+.display h1 {
+  font-weight: 700;
+  color: white;
+  font-size: 64px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  width: 800px;
+  padding-left: 104px;
+  padding-top: 259px;
+  padding-bottom: 166.51px;
+}
+
+.product-card {
+  width: 417px;
+  flex: 1;
+  padding-inline: 50px;
+  padding-block: 30px;
+  background-image: url("./assets/black.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card.second {
+  background-image: url("./assets/yellow.png");
+  position: relative;
+}
+
+del {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: rgba(144, 152, 177, 1);
+}
+
+.product-card.third {
+  background-image: url("./assets/red.png");
+}
+
+.price {
+  margin-top: 185px;
+}
+
+.price.third {
+  margin-top: 22px;
+}
+
+.nikeprice {
+  margin-top: 161px;
+}
+
+.discount {
+  margin-left: 8px;
+}
+
+.price.second {
+  text-align: center;
+  margin-top: 220px;
+}
+
+.second-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: rgba(34, 50, 99, 1);
+  letter-spacing: 0.5px;
+  width: 202px;
+}
+
+.product-card h3 {
+  color: rgba(64, 191, 255, 1);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  text-align: end;
+}
+
+.product-section {
+  width: 86.3%;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: absolute;
+  top: 560px;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 10px 25px 0px rgba(102, 102, 102, 0.15);
+  animation: fadeIn 1s ease-in;
+}
+
+.Hero {
+  position: relative;
+}
+
+.products {
+  display: flex;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* Grid section */
+
+.fashion {
+  margin-top: 375px;
+}
+
+.fashion h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.goods {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 26px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* WHY US SECTION */
+
+.whyUs {
+  padding-block: 98px;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 164px;
+ animation: fadeIn 1s ease-in;
+}
+
+.services h4 {
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(34, 38, 42, 1);
+  margin-top: 54px;
+}
+
+.services p {
+  font-family: "proxima niva", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(34, 38, 42, 1);
+  margin-top: 12px;
+}
+
+.services img {
+  width: 50px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.services {
+  width: 200px;
+  align-items: center;
+  text-align: center;
+}
+
+.whycont {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LATEST NEWS */
+
+.newscont h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(34, 38, 42, 1);
+}
+
+.newcard {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.newstext {
+  color: rgba(34, 38, 42, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 200px;
+}
+
+.newstext p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(193, 200, 206, 1);
+}
+
+.newstext h3 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.newstext h4 {
+  font-family: "proxima niva", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: rgba(34, 38, 42, 1);
+}
+
+.contain {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 71.97px;
+  margin-inline: auto;
+  width: 86%;
+  margin-bottom: 110px;
+}
+
+/* Featured products */
+
+.featured {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.featuredproduct {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 55.5px;
+    padding-inline: 58px;
+    margin-bottom: 110px;
+}
+
+.featured-cont h1 {
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(34, 38, 42, 1);
+  text-align: center;
+}
+
+.contF {
+  display: flex;
+  gap: 25px;
+   transition: all 0.5s ease;
+}
+
+.contF:hover {
+ transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feat {
+    width: 250px;
+}
+
+.feat h2 {
+  font-family: "proxima nova";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 110%;
+  letter-spacing: 0%;
+  margin-bottom: 17px;
+}
+
+.tag {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.tag p {
+  color: rgba(255, 72, 88, 1);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.old {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(193, 200, 206, 1);
+  text-decoration: line-through;
+}
+
+
+
+@media (max-width: 768px) {
+.products {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.display h1 {
+    width: 100%;
+}
+.links {
+    display: none;
+}
+.whyUs {
+    padding-inline: 40px;
+}
+.featuredproduct {
+    flex-direction: column;
+    gap: 40px;
+}
+.contain {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+.fashion {
+    margin-top: 1200px;
+}
+}

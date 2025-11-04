@@ -1,0 +1,246 @@
+.deal {
+  display: flex;
+  gap: 32px;
+  width: 84.19%;
+  margin-top: 51.53px;
+  margin-bottom: 155px;
+  margin-inline: auto;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.selections {
+  width: 270px;
+  padding-inline: 17px;
+  padding-top: 19px;
+  padding-bottom: 26px;
+  background-color: #f6f7f8;
+  border-radius: 4px;
+}
+
+.selections h2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.cats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.fashion-brands {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fashion-brands p {
+  color: grey;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.fashion-brands h4 {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.slider-container {
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 28px;
+  padding-inline: 17px;
+  background-color: #f6f7f8;
+  border-radius: 4px;
+}
+
+.slider-container h4 {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.track {
+  height: 6px;
+  background: #ccc;
+  border-radius: 3px;
+  position: relative;
+}
+
+.thumb {
+  height: 12px;
+  width: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+
+.brands {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background-color: #f6f7f8;
+  padding-top: 19px;
+  padding-inline: 17px;
+  padding-bottom: 26px;
+  display: block;
+}
+
+.brand h4 {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  width: 100;
+}
+
+.brand p {
+  color: grey;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.sidebar button {
+  background-color: #f6f7f8;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-block: 19px;
+  width: 100%;
+}
+
+.brandlist {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.product-side {
+    width: 961.57px;
+}
+
+.secondAdvert {
+  width: 100%;
+  background-color: #40bfff;
+  color: white;
+  padding-block: 56px;
+  padding-inline: 110px;
+  position: relative;
+}
+
+.texts {
+    width: 350.92px;
+}
+
+.texts h1 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.texts p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 30px;
+}
+
+.texts button {
+font-weight: 600;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+margin-top: 24.74px;
+}
+
+.adpic {
+    position: absolute;
+    left: 450.34px;
+    bottom: 4px;
+}
+
+.bar, .leftbar, .rightbar, .sort, .show, .options {
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    background-color: #F6F7F8;
+    padding-block: 20px;
+    padding-inline: 22px;
+    width: 100%;
+    justify-content: space-between;
+    margin-block: 25px;
+}
+
+.leftbar {
+    gap: 50px;
+}
+
+.options {
+    gap: 43px;
+    border: 2px #F1F3F4 solid;
+    padding-block: 10px;
+   padding-inline: 16px;
+}
+
+.sort , .show {
+    gap: 12px;
+}
+
+.grid, .flexed {
+    padding-block: 21px;
+    padding-inline: 17.68px;
+}
+
+.hotgrid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 34px;
+}
+
+.numbers {
+  background-color: #FAFAFB;
+  margin-top: 47px;
+}
+
+.setnumb button{
+padding-block: 17px;
+background: transparent;
+border: none;
+padding-inline: 25px;
+cursor: pointer;
+}
