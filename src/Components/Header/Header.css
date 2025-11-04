@@ -101,7 +101,7 @@ li:hover {
   transform: translateY(-10px);
   transition: all 0.3s ease;
   min-width: 200px;
-  width: 60%;
+  width: 65%;
   z-index: 100;
 }
 
@@ -177,6 +177,9 @@ gap: 14px;
   .links {
     gap: 60px;
   }
+  .dropdown-menu {
+  width: 80%;
+}
 }
 
 
@@ -184,10 +187,18 @@ gap: 14px;
 @media (max-width: 900px) {
   /* Show hamburger */
   .Header {
-    padding-inline: 60px;
+    padding-inline: 30px;
   }
   .hamburger {
     display: flex;
+  }
+
+.dropdown-menu {
+  display: none;
+}
+
+  .hotlink {
+    display: block;
   }
 
   /* Navigation links styling for mobile */

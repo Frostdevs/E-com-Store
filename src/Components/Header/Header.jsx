@@ -79,7 +79,7 @@ const Header = () => {
             </svg>
             <p>My profile</p>
           </div>
-          <NavLink to="/"  className="cart">
+          <NavLink to="/cart" className="cart">
             <CiShoppingCart className="w-6 h-6 items-center" />
             <span className="cartcount">0</span>
           </NavLink>
@@ -137,47 +137,59 @@ const Header = () => {
               CONTACT
             </NavLink>
           </li>
+
+          {isMenuOpen && (
+            <li>
+              <NavLink to="/hot" className="hotlink hidden">
+                Hot Deal
+              </NavLink>
+            </li>
+          )}
         </ul>
 
         <div className="dropdown-menu">
           <div className="hover-cont">
             <div className="category">
               <h1>Category</h1>
-             <div className="fits">
-               <ul>
-                <li>Corporate Shoes</li>
-                <li>Sneakers</li>
-                <li>Sandals</li>
-                <li>Sport Shoe</li>
-                <li>Trainers</li>
-              </ul>
-              <ul>
-                <li>Corporate Shoes</li>
-                <li>Sneakers</li>
-                <li>Sandals</li>
-                <li>Sport Shoe</li>
-                <li>Trainers</li>
-              </ul>
-             </div>
+              <div className="fits">
+                <ul>
+                  <li>Corporate Shoes</li>
+                  <li>Sneakers</li>
+                  <li>Sandals</li>
+                  <li>Sport Shoe</li>
+                  <li>Trainers</li>
+                </ul>
+                <ul>
+                  <li>Corporate Shoes</li>
+                  <li>Sneakers</li>
+                  <li>Sandals</li>
+                  <li>Sport Shoe</li>
+                  <li>Trainers</li>
+                </ul>
+              </div>
             </div>
             <div className="category">
               <h1>Category</h1>
-            <div className="fits">
+              <div className="fits">
                 <ul>
-                <li><NavLink to="/hot">Hot Deal</NavLink></li>
-                <li>Sunglasses</li>
-                <li>Belts</li>
-                <li>Handbags</li>
-                <li>Sneakers</li>
-              </ul>
-              <ul>
-                <li><NavLink to="/hot">Hot Deal</NavLink></li>
-                <li>Sneakers</li>
-                <li>Belts</li>
-                <li>Handbags</li>
-                <li>Sneakers</li>
-              </ul>
-            </div>
+                  <li>
+                    <NavLink to="/hot">Hot Deal</NavLink>
+                  </li>
+                  <li>Sunglasses</li>
+                  <li>Belts</li>
+                  <li>Handbags</li>
+                  <li>Sneakers</li>
+                </ul>
+                <ul>
+                  <li>
+                    <NavLink to="/hot">Hot Deal</NavLink>
+                  </li>
+                  <li>Sneakers</li>
+                  <li>Belts</li>
+                  <li>Handbags</li>
+                  <li>Sneakers</li>
+                </ul>
+              </div>
             </div>
             <div className="category">
               <h1>Category</h1>
