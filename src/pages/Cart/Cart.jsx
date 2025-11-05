@@ -16,7 +16,6 @@ const Cart = () => {
   } = useCart();
 
   const [voucherCode, setVoucherCode] = useState("");
-
   if (cartItems.length === 0) {
     return (
       <div className="cart-page">
