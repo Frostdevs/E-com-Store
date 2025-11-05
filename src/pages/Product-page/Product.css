@@ -214,6 +214,7 @@ letter-spacing: 0%;
   padding-block: 15.5px;
   padding-inline: 32px;
   border-radius: 4px;
+  justify-content: center;
 }
 
 .twit {
@@ -222,6 +223,7 @@ letter-spacing: 0%;
    padding-block: 15.5px;
   padding-inline: 32px;
   border-radius: 4px;
+  justify-content: center;
 }
 
 .social p {
@@ -360,7 +362,41 @@ margin-bottom: 84px;
   margin-top: 78px;
 }
 
+@media (max-width: 1024px) {
+  .realsec{
+    width: 100%;
+  }
+  
+  .productdetails{
+    flex-direction: column;
+  }
+  .imgGlide {
+    display: grid;
+    row-gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .relatedproducts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+    .para1 p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 785px) {
+ .count{
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+
 @media (max-width: 768px) {
+  .asset {
+    width: 100%;
+  }
   .relatedproducts {
     flex-direction: column;
   }
@@ -373,9 +409,12 @@ margin-bottom: 84px;
     flex-direction: column;
     width: 100%;
   }
+ .imgGlide {
+    display: flex;
+ }
   .imgGlide img {
-    width: 50px;
-    height: 55px;
+    width: 80px;
+    height: 85px;
   }
   .social{
     flex-direction: column;
@@ -395,5 +434,19 @@ margin-bottom: 84px;
   }
   .detailed{
     width: 100%;
+  }
+}
+
+@media (max-width: 625px) {
+ .relatedproducts {
+  display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 402px) {
+   .imgGlide img {
+    width: 60px;
+    height: 65px;
   }
 }
