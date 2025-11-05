@@ -5,6 +5,7 @@ import Contact from "./pages/Contact-Page/Contact";
 import Hotdeal from "./pages/Hot-deal/Hot"
 import Product from "./pages/Product-page/Product"
 import Cart from "./pages/Cart/Cart";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   return (
    
    <BrowserRouter>
-
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Landingpage />} />
         <Route path="/contact" element={<Contact />} />

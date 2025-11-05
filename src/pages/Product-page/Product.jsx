@@ -9,20 +9,33 @@ import wine from "../../assets/winebag.png";
 import StarRating from "../../Components/Starrating/Rating";
 import "./Product.css";
 import { FaCaretDown } from "react-icons/fa";
-import image1 from "../../assets/image1.png"
+import image1 from "../../assets/image1.png";
 import ProductCard from "../../Components/ProductCard/ProductCard";
-import Footer from "../../Components/Footer/Footer"
-import shoe from "../../assets/image Product (7).png"
-import cream from "../../assets/creambag.png"
-
+import Footer from "../../Components/Footer/Footer";
+import shoe from "../../assets/image Product (7).png";
+import cream from "../../assets/creambag.png";
+import { useState } from "react";
 
 const Product = () => {
+  const [count, setCount] = useState(0);
+  const handleCount = () => {
+    if (count === 0) {
+      setCount(0);
+    } else {
+      setCount(count - 1);
+    }
+  };
 
+  const [isLiked, setIsLiked] = useState(false);
+
+  const toggleLike = () => {
+    setIsLiked(!isLiked);
+  };
 
   return (
     <div className="container">
       <Header />
-      <Crumbs text="Hot Deal" secondText="/ Nike Air Force" color="#33A0FF"/>
+      <Crumbs text="Hot Deal" secondText="/ Nike Air Force" color="#33A0FF" />
       <div className="productdetails">
         <div className="info">
           <div className="realsec">
@@ -35,20 +48,10 @@ const Product = () => {
                 />
               </div>
               <div className="imgGlide">
-                <img
-                  src={down}
-                  alt=""
-                />
-                <img
-                  src={yellow}
-                  alt=""
-                
-                />
-                <img src={red} alt=""  />
-                <img
-                  src={back}
-                  alt=""
-                />
+                <img src={down} alt="" />
+                <img src={yellow} alt="" />
+                <img src={red} alt="" />
+                <img src={back} alt="" />
               </div>
             </div>
             <div className="detailed">
@@ -91,9 +94,9 @@ const Product = () => {
               </div>
               <div className="count">
                 <div className="quantity">
-                  <p>-</p>
-                  <h4>2</h4>
-                  <p>+</p>
+                  <p onClick={handleCount}>-</p>
+                  <h4>{count}</h4>
+                  <p onClick={() => setCount(count + 1)}>+</p>
                 </div>
                 <div className="act">
                   <button className="addToCart">
@@ -113,19 +116,23 @@ const Product = () => {
                     </svg>
                     <p>Add To Cart</p>
                   </button>
-                  <button className="fav">
+                  <button  className="fav">
                     <svg
                       width="17"
                       height="15"
                       viewBox="0 0 17 15"
                       fill="none"
+                      onClick={toggleLike}
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
                         d="M11.6587 2.12667C12.2725 2.12769 12.873 2.30598 13.388 2.6401C13.903 2.97423 14.3107 3.45 14.5621 4.01029C14.8134 4.57057 14.8978 5.19153 14.805 5.79862C14.7123 6.40572 14.4464 6.97311 14.0393 7.43269C13.4548 8.09196 8.47054 12.76 8.47054 12.76C8.47054 12.76 3.47568 8.09195 2.89118 7.42205C2.37558 6.84232 2.09179 6.0927 2.09413 5.31667C2.09413 4.47063 2.43001 3.65922 3.02791 3.06098C3.62582 2.46274 4.43677 2.12667 5.28233 2.12667C6.1279 2.12667 6.93885 2.46274 7.53675 3.06098C8.13466 3.65922 8.47054 4.47063 8.47054 5.31667C8.47054 4.47063 8.80642 3.65922 9.40432 3.06098C10.0022 2.46274 10.8132 2.12667 11.6587 2.12667ZM11.6587 8.67073e-06C10.5087 -0.00207447 9.38933 0.371252 8.47054 1.06334C7.41805 0.285571 6.11578 -0.0763236 4.81317 0.0469967C3.51056 0.170317 2.29919 0.770207 1.41117 1.73169C0.52316 2.69317 0.0209117 3.94867 0.00063843 5.25768C-0.0196349 6.56668 0.443547 7.83711 1.30136 8.82565C1.89862 9.51044 5.82965 13.1938 7.01991 14.3061C7.41365 14.6744 7.93252 14.8794 8.47157 14.8794C9.01062 14.8794 9.52957 14.6744 9.9233 14.3061C11.1093 13.1949 15.0244 9.52106 15.6291 8.83734C16.306 8.07102 16.7475 7.12566 16.9009 6.11456C17.0543 5.10346 16.913 4.06956 16.494 3.13679C16.0749 2.20402 15.3959 1.41196 14.5383 0.855594C13.6806 0.299227 12.6808 0.00218201 11.6587 8.67073e-06Z"
-                        fill="#33A0FF"
+                          fill={isLiked ? '#FF0000' : '#33A0FF'}
+                        style={{
+                          transition: "fill 0.3s ease-in-out",
+                        }}
                       />
                     </svg>
                   </button>
@@ -168,7 +175,9 @@ const Product = () => {
           <div className="information">
             <ul className="head">
               <li>Product Infomation</li>
-              <li>Reviews <span>0</span></li>
+              <li>
+                Reviews <span>0</span>
+              </li>
               <li>Another tab</li>
             </ul>
             <div className="divi">
@@ -210,7 +219,7 @@ const Product = () => {
           <div className="bestprod">
             <img src={image1} alt="" />
             <div className="pricing">
-              <StarRating rating={4}/>
+              <StarRating rating={4} />
               <div className="spanedprice">
                 <p>$499</p>
                 <span className=" ">$599</span>
@@ -222,13 +231,41 @@ const Product = () => {
       <section className="related">
         <h1>RELATED PRODUCTS</h1>
         <div className="relatedproducts flex gap-[33px]">
-          <ProductCard image={image1} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={'True'} rating={4}/>
-          <ProductCard image={wine} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={false} rating={4}/>
-          <ProductCard image={cream} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={false} rating={4}/>
-          <ProductCard image={shoe} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={false} rating={4}/>
+          <ProductCard
+            image={image1}
+            title="Nike Air Max 270 React"
+            price={"534,33"}
+            originalPrice={"299,43"}
+            isHot={"True"}
+            rating={4}
+          />
+          <ProductCard
+            image={wine}
+            title="Nike Air Max 270 React"
+            price={"534,33"}
+            originalPrice={"299,43"}
+            isHot={false}
+            rating={4}
+          />
+          <ProductCard
+            image={cream}
+            title="Nike Air Max 270 React"
+            price={"534,33"}
+            originalPrice={"299,43"}
+            isHot={false}
+            rating={4}
+          />
+          <ProductCard
+            image={shoe}
+            title="Nike Air Max 270 React"
+            price={"534,33"}
+            originalPrice={"299,43"}
+            isHot={false}
+            rating={4}
+          />
         </div>
       </section>
-     <Footer/>
+      <Footer />
     </div>
   );
 };

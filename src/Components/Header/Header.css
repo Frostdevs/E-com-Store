@@ -239,7 +239,7 @@ gap: 14px;
     width: 100%;
   }
 
-  /* Overlay behind menu */
+  
   .links.active::before {
     content: '';
     position: fixed;
@@ -254,6 +254,9 @@ gap: 14px;
 
 @media (max-width: 585px) {
 .top-menu {
+  display: none;
+}
+.divider {
   display: none;
 }
 }
