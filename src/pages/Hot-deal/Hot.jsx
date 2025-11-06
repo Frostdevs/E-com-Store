@@ -16,6 +16,7 @@ import Colored from "../../Components/Coloredbtn/Colored";
 import yellow from "../../assets/yellow.png"
 import down from "../../assets/down.png"
 import backside from "../../assets/backside.png"
+import { FiFilter } from "react-icons/fi";
 
 
 const Hot = () => {
@@ -126,7 +127,6 @@ const Hot = () => {
             <img
               src={advertpic}
               alt=""
-              style={{ width: 400, height: 300 }}
               className="adpic"
             />
           </div>
@@ -148,6 +148,7 @@ const Hot = () => {
                 </div>
               </div>
             </div>
+              <FiFilter  className="filtericon hidden"/>
             <div className="rightbar">
               <div className="grid">
                 <svg

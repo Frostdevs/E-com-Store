@@ -157,6 +157,7 @@
   padding-block: 56px;
   padding-inline: 110px;
   position: relative;
+  border-radius: 4px;
 }
 
 .texts {
@@ -190,6 +191,8 @@ margin-top: 24.74px;
     position: absolute;
     left: 450.34px;
     bottom: 4px;
+     width: 400px;
+    height: 300px;
 }
 
 .bar, .leftbar, .rightbar, .sort, .show, .options {
@@ -243,4 +246,76 @@ background: transparent;
 border: none;
 padding-inline: 25px;
 cursor: pointer;
+}
+
+@media (max-width: 1345px) {
+.sidebar {
+  width: 200px;
+}
+.selections {
+  width: 100%;
+}
+}
+
+@media (max-width: 1170px) {
+  .product-side {
+    width: 700px;
+  }
+  .hotgrid {
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .secondAdvert {
+    padding-inline: 50px;
+  }
+  .adpic {
+height: 210px;
+width: 200px;
+left: 400px;
+bottom: 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .leftbar {
+    display: none;
+  }
+  .filtericon {
+    display: block;
+    height: 30px;
+    width: 30px;
+    color: grey;
+  }
+  .secondAdvert {
+    padding-inline: 20px;
+  }
+  .adpic {
+    left: 350px;
+  }
+}
+
+@media (max-width: 860px) {
+.texts {
+  width: 300px;
+}
+.adpic {
+  left: 300px;
+}
+.product-side {
+  width: 450px;
+}
+}
+
+@media (max-width: 845px) {
+  .hotgrid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+.adpic {
+  width: 150px;
+  height: 160px;
+  left: 250px;
+}
 }

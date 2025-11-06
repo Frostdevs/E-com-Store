@@ -143,7 +143,7 @@ gap: 14px;
 
 
 
-/* Hamburger Menu - Hidden by default */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -160,7 +160,7 @@ gap: 14px;
   border-radius: 2px;
 }
 
-/* Hamburger animation when active */
+
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(8px, 8px);
 }
@@ -183,9 +183,7 @@ gap: 14px;
 }
 
 
-/* Media Query for mobile */
 @media (max-width: 900px) {
-  /* Show hamburger */
   .Header {
     padding-inline: 30px;
   }
@@ -201,7 +199,6 @@ gap: 14px;
     display: block;
   }
 
-  /* Navigation links styling for mobile */
   .links {
     margin-left: 0;
     position: fixed;
@@ -222,7 +219,7 @@ gap: 14px;
       transform: translateX(100%);
   }
 
-  /* Show menu when active */
+
   .links.active {
       transform: translateX(0);
   }
@@ -230,7 +227,7 @@ gap: 14px;
   .links li {
     width: 100%;
     padding: 15px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #d8d8d8;
   }
 
   .links li a {
@@ -247,7 +244,7 @@ gap: 14px;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: -1;
   }
 }
