@@ -87,11 +87,17 @@ const Hot = () => {
               values={values}
               onChange={setValues}
               renderTrack={({ props, children }) => (
-                <div {...props} className="track">
+                <div {...props} className="track"  key={`track-${values[0]}-${values[1]}`} >
                   {children}
                 </div>
               )}
-              renderThumb={({ props }) => <div {...props} className="thumb" />}
+               renderThumb={({ props, index }) => (
+    <div 
+      {...props} 
+      className="thumb" 
+      key={index} 
+    />
+  )}
             />
           </div>
 
