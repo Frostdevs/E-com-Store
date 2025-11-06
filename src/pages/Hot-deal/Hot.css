@@ -364,6 +364,8 @@
     height: 100vh;
     visibility: hidden;
     box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+    scrollbar-width: thin;
   }
   .cancel {
     display: block;
@@ -380,15 +382,16 @@
 }
 
 @media (max-width: 465px) {
-.texts {
-  width: 200px;
-}
-.texts h1 , .texts p {
-  line-height: 30px;
-}
-.adpic {
-  left: 190px;
-}
+  .texts {
+    width: 200px;
+  }
+  .texts h1,
+  .texts p {
+    line-height: 30px;
+  }
+  .adpic {
+    left: 190px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -398,26 +401,27 @@
   .sidebar {
     width: 80%;
   }
-.adpic {
-  width: 90px;
-  height: 95px;
-}
+  .adpic {
+    width: 90px;
+    height: 95px;
+  }
 }
 
 @media (max-width: 320px) {
-.sidebar {
-  width: 90%;
-}
-.adpic {
-  left: 110px;
-}
+  .sidebar {
+    width: 90%;
+  }
+  .adpic {
+    left: 110px;
+  }
 }
 
 @media (max-width: 270px) {
   .secondAdvert {
     padding-inline: 10px;
   }
-.texts h1 , .texts p {
-  width: 100%;
-}
+  .texts h1,
+  .texts p {
+    width: 100%;
+  }
 }
