@@ -147,7 +147,7 @@
 }
 
 .product-side {
-    width: 961.57px;
+  width: 961.57px;
 }
 
 .secondAdvert {
@@ -161,7 +161,7 @@
 }
 
 .texts {
-    width: 350.92px;
+  width: 350.92px;
 }
 
 .texts h1 {
@@ -180,81 +180,109 @@
 }
 
 .texts button {
-font-weight: 600;
-font-size: 12px;
-line-height: 100%;
-letter-spacing: 0%;
-margin-top: 24.74px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-top: 24.74px;
 }
 
 .adpic {
-    position: absolute;
-    left: 450.34px;
-    bottom: 4px;
-     width: 400px;
-    height: 300px;
+  position: absolute;
+  left: 450.34px;
+  bottom: 4px;
+  width: 400px;
+  height: 300px;
 }
 
-.bar, .leftbar, .rightbar, .sort, .show, .options {
-    display: flex;
-    align-items: center;
+.bar,
+.leftbar,
+.rightbar,
+.sort,
+.show,
+.options {
+  display: flex;
+  align-items: center;
 }
 
 .bar {
-    background-color: #F6F7F8;
-    padding-block: 20px;
-    padding-inline: 22px;
-    width: 100%;
-    justify-content: space-between;
-    margin-block: 25px;
+  background-color: #f6f7f8;
+  padding-block: 20px;
+  padding-inline: 22px;
+  width: 100%;
+  justify-content: space-between;
+  margin-block: 25px;
 }
 
 .leftbar {
-    gap: 50px;
+  gap: 50px;
 }
 
 .options {
-    gap: 43px;
-    border: 2px #F1F3F4 solid;
-    padding-block: 10px;
-   padding-inline: 16px;
+  gap: 43px;
+  border: 2px #f1f3f4 solid;
+  padding-block: 10px;
+  padding-inline: 16px;
 }
 
-.sort , .show {
-    gap: 12px;
+.sort,
+.show {
+  gap: 12px;
 }
 
-.grid, .flexed {
-    padding-block: 21px;
-    padding-inline: 17.68px;
+.grid,
+.flexed {
+  padding-block: 21px;
+  padding-inline: 17.68px;
 }
 
 .hotgrid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 34px;
 }
 
 .numbers {
-  background-color: #FAFAFB;
+  background-color: #fafafb;
   margin-top: 47px;
 }
 
-.setnumb button{
-padding-block: 17px;
-background: transparent;
-border: none;
-padding-inline: 25px;
-cursor: pointer;
+.setnumb button {
+  padding-block: 17px;
+  background: transparent;
+  border: none;
+  padding-inline: 25px;
+  cursor: pointer;
+}
+
+.filter-toggle {
+  visibility: hidden;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #40bfff;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  z-index: 999;
+  cursor: pointer;
 }
 
 @media (max-width: 1345px) {
-.sidebar {
-  width: 200px;
-}
-.selections {
-  width: 100%;
-}
+  .sidebar {
+    width: 200px;
+  }
+  .selections {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1170px) {
@@ -262,16 +290,16 @@ cursor: pointer;
     width: 700px;
   }
   .hotgrid {
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .secondAdvert {
     padding-inline: 50px;
   }
   .adpic {
-height: 210px;
-width: 200px;
-left: 400px;
-bottom: 20px;
+    height: 210px;
+    width: 200px;
+    left: 400px;
+    bottom: 20px;
   }
 }
 
@@ -294,15 +322,15 @@ bottom: 20px;
 }
 
 @media (max-width: 860px) {
-.texts {
-  width: 300px;
-}
-.adpic {
-  left: 300px;
-}
-.product-side {
-  width: 450px;
-}
+  .texts {
+    width: 300px;
+  }
+  .adpic {
+    left: 300px;
+  }
+  .product-side {
+    width: 450px;
+  }
 }
 
 @media (max-width: 845px) {
@@ -313,9 +341,80 @@ bottom: 20px;
 }
 
 @media (max-width: 800px) {
+  .product-side {
+    margin-inline: auto;
+  }
+  .adpic {
+    width: 150px;
+    height: 160px;
+    left: 250px;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    padding: 40px 20px;
+    width: 60%;
+    height: 100vh;
+    visibility: hidden;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+  }
+  .cancel {
+    display: block;
+    font-size: 20px;
+    margin-left: auto;
+  }
+
+  .sidebar.active {
+    visibility: visible;
+  }
+  .filter-toggle {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 465px) {
+.texts {
+  width: 200px;
+}
+.texts h1 , .texts p {
+  line-height: 30px;
+}
 .adpic {
-  width: 150px;
-  height: 160px;
-  left: 250px;
+  left: 190px;
+}
+}
+
+@media (max-width: 400px) {
+  .product-side {
+    width: 100%;
+  }
+  .sidebar {
+    width: 80%;
+  }
+.adpic {
+  width: 90px;
+  height: 95px;
+}
+}
+
+@media (max-width: 320px) {
+.sidebar {
+  width: 90%;
+}
+.adpic {
+  left: 110px;
+}
+}
+
+@media (max-width: 270px) {
+  .secondAdvert {
+    padding-inline: 10px;
+  }
+.texts h1 , .texts p {
+  width: 100%;
 }
 }

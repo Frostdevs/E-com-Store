@@ -7,37 +7,43 @@ import { useState } from "react";
 import { Range } from "react-range";
 import { FaCaretDown } from "react-icons/fa";
 import ProductCard from "../../Components/ProductCard/ProductCard";
-import Footer from "../../Components/Footer/Footer"
-import image1 from "../../assets/image1.png"
-import shoe from "../../assets/image Product (7).png"
-import cream from "../../assets/creambag.png"
+import Footer from "../../Components/Footer/Footer";
+import image1 from "../../assets/image1.png";
+import shoe from "../../assets/image Product (7).png";
+import cream from "../../assets/creambag.png";
 import wine from "../../assets/winebag.png";
 import Colored from "../../Components/Coloredbtn/Colored";
-import yellow from "../../assets/yellow.png"
-import down from "../../assets/down.png"
-import backside from "../../assets/backside.png"
+import yellow from "../../assets/yellow.png";
+import down from "../../assets/down.png";
+import backside from "../../assets/backside.png";
 import { FiFilter } from "react-icons/fi";
-
+import { FaTimes } from "react-icons/fa";
+import { IoFilterSharp } from "react-icons/io5";
 
 const Hot = () => {
   const MIN = 0;
   const MAX = 100;
   const [values, setValues] = useState([13.99, 25.99]);
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
-
-  const colors = ["blue", "red", "black", "yellow", "magenta", "pink"];
-  const [selectedColor, setSelectedColor] = useState("blue");
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
     <div className="container">
       <Header />
       <Crumbs text="Hot Deal" />
       <div className="deal">
-        <div className="sidebar">
+        <div className={`sidebar ${isSidebarOpen ? 'active' : ''}`}>
+          <FaTimes className="cancel hidden" onClick={closeSidebar} />
           <div className="selections">
-            <h2>Hot Deals</h2>
+            <h2 className=" flex justify-between">Hot Deals </h2>
             <div className="cats">
               <div className="fashion-brands">
                 <h4>Nike</h4>
@@ -124,11 +130,7 @@ const Hot = () => {
               <button>SHOP NOW</button>
             </div>
 
-            <img
-              src={advertpic}
-              alt=""
-              className="adpic"
-            />
+            <img src={advertpic} alt="" className="adpic" />
           </div>
           <div className="bar">
             <div className="leftbar">
@@ -148,7 +150,7 @@ const Hot = () => {
                 </div>
               </div>
             </div>
-              <FiFilter  className="filtericon hidden"/>
+            <FiFilter className="filtericon hidden" />
             <div className="rightbar">
               <div className="grid">
                 <svg
@@ -185,28 +187,97 @@ const Hot = () => {
             </div>
           </div>
           <section className="hotgrid">
-             <ProductCard image={image1} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={'True'} rating={4}/>
-          <ProductCard image={wine} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={true} rating={4}/>
-          <ProductCard image={cream} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={true} rating={4}/>
-          <ProductCard image={down} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={true} rating={4}/>
-          <ProductCard image={yellow} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={true} rating={4}/>
-          <ProductCard image={backside} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={true} rating={4}/>
-          <ProductCard image={shoe} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={true} rating={4}/>
-          <ProductCard image={shoe} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={true} rating={4}/>
-          <ProductCard image={wine} title= 'Nike Air Max 270 React' price={"534,33"} originalPrice={"299,43"} isHot={true} rating={4}/>
+            <ProductCard
+              image={image1}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={"True"}
+              rating={4}
+            />
+            <ProductCard
+              image={wine}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={true}
+              rating={4}
+            />
+            <ProductCard
+              image={cream}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={true}
+              rating={4}
+            />
+            <ProductCard
+              image={down}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={true}
+              rating={4}
+            />
+            <ProductCard
+              image={yellow}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={true}
+              rating={4}
+            />
+            <ProductCard
+              image={backside}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={true}
+              rating={4}
+            />
+            <ProductCard
+              image={shoe}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={true}
+              rating={4}
+            />
+            <ProductCard
+              image={shoe}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={true}
+              rating={4}
+            />
+            <ProductCard
+              image={wine}
+              title="Nike Air Max 270 React"
+              price={"534,33"}
+              originalPrice={"299,43"}
+              isHot={true}
+              rating={4}
+            />
           </section>
           <div className="numbers flex justify-center">
             <div className="setnumb flex">
-           <Colored label={1}/>
-           <Colored label={2}/>
-           <Colored label={3}/>
-           <Colored label={4}/>
-           <Colored label={5}/>
+              <Colored label={1} />
+              <Colored label={2} />
+              <Colored label={3} />
+              <Colored label={4} />
+              <Colored label={5} />
             </div>
           </div>
         </div>
       </div>
-        <Footer/>
+      <button
+        className="filter-toggle"
+        onClick={toggleSidebar}
+      >
+        <IoFilterSharp /> Filters
+      </button>
+      <Footer />
     </div>
   );
 };
