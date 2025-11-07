@@ -18,7 +18,7 @@ const Landingpage = () => {
   //  const [count, setCount] = useState(0);
 
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.4, triggerOnce: false });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: false });
 
   useEffect(() => {
     if (inView) {

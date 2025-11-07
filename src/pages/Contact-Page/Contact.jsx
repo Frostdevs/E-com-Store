@@ -130,7 +130,9 @@ const Contact = () => {
             </div>
             <div className="formcol">
               <form onSubmit={handleSubmit} className="contact-form">
+
                 {/* Success Message */}
+
                 {submitSuccess && (
                   <div className="success-message">
                     Message sent successfully! ✓
@@ -138,6 +140,7 @@ const Contact = () => {
                 )}
 
                 {/* Fullname */}
+
                 <div className="form-group">
                   <label htmlFor="fullname">Fullname</label>
                   <input
@@ -155,6 +158,7 @@ const Contact = () => {
                 </div>
 
                 {/* Email */}
+
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
                   <input
@@ -172,6 +176,7 @@ const Contact = () => {
                 </div>
 
                 {/* Message */}
+                
                 <div className="form-group">
                   <label htmlFor="message">Message</label>
                   <textarea

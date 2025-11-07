@@ -4,6 +4,7 @@ import advertpic from "../../assets/advertshoe.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 const Advert = () => {
   const controls = useAnimation();
@@ -28,7 +29,7 @@ const Advert = () => {
           <h1>Adidas Men Running Sneakers</h1>
           <p>Performance and design. Taken right to the edge.</p>
           <button className="shop">
-            <h4>SHOP NOW</h4>
+            <NavLink to="/hot">SHOP NOW</NavLink>
             <span className="line"></span>
           </button>
         </div>

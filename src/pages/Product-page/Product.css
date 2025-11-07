@@ -1,3 +1,5 @@
+/* product details */
+
 .productdetails {
   display: flex;
   gap: 42px;
@@ -6,6 +8,7 @@
   margin-top: 42.28px;
 }
 
+/* product description section */
 .realsec {
   display: flex;
   gap: 42px;
@@ -34,7 +37,7 @@ width: 100%;
 height: 271.7;
 margin-bottom: 134px;
 }
-
+/* review container */
 .detailed {
   width: 500px;
 }
@@ -76,6 +79,8 @@ margin-bottom: 134px;
   color: #33a0ff;
 }
 
+/* asset container */
+
 .asset {
   font-weight: 400;
   font-size: 14px;
@@ -86,6 +91,15 @@ margin-bottom: 134px;
   flex-direction: column;
   gap: 16px;
 }
+
+.availability,
+.accessories {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* price showcase */
 
 .productprice {
   padding-top: 27.5px;
@@ -125,12 +139,7 @@ margin-bottom: 134px;
   letter-spacing: 0.5px;
 }
 
-.availability,
-.accessories {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
+/* color section */
 
 .colorsect {
   padding-block: 21.27px;
@@ -142,11 +151,13 @@ margin-bottom: 134px;
   align-items: center;
   gap: 50px;
 }
+
 .col {
   display: flex;
   gap: 17px;
 }
 
+/* sizes */
 .sizes {
   display: flex;
   align-items: center;
@@ -164,7 +175,7 @@ margin-bottom: 134px;
   align-items: center;
 }
 
-
+/* quantity */
 .count {
     padding-block: 21px;
     display: flex;
@@ -190,6 +201,8 @@ margin-bottom: 134px;
   
 }
 
+/* cart */
+
 .addToCart {
     display: flex;
     align-items: center;
@@ -208,6 +221,8 @@ font-size: 16px;
 line-height: 100%;
 letter-spacing: 0%;
 }
+
+/* share on socials */
 
 .social {
   padding-top: 20px;
@@ -244,6 +259,8 @@ font-size: 16px;
 line-height: 100%;
 letter-spacing: 0%;
 }
+
+/* product description or proper details */
 
 .information {
   margin-top: 50px;
@@ -314,6 +331,9 @@ width: 760px;
   background-color: #2E90E5;
   display: block;
 }
+
+/* best product */
+
 .best h1 {
   color: #C1C8CE;
 font-weight: 400;
@@ -358,6 +378,8 @@ letter-spacing: 0%;
 color: #C1C8CE;
 text-decoration: line-through;
 }
+
+/* Related products */
 
 .related h1{
 text-align: center;

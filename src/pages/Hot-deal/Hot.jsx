@@ -40,12 +40,17 @@ const Hot = () => {
       <Header />
       <Crumbs text="Hot Deal" />
       <div className="deal">
+        {/* sidebar container */}
         <div className={`sidebarCont ${isSidebarOpen ? 'active' : ''}`}>
           <FaTimes className="cancel hidden" onClick={closeSidebar} />
 
+{/* sidebar */}
+
         <div className="sidebar">
+          {/* quick filter */}
           <div className="selections">
             <h2 className=" flex justify-between">Hot Deals </h2>
+            {/* categories */}
             <div className="cats">
               <div className="fashion-brands">
                 <h4>Nike</h4>
@@ -77,6 +82,7 @@ const Hot = () => {
               </div>
             </div>
           </div>
+          {/* range of prices */}
           <div className="slider-container">
             <h3>PRICES</h3>
             <h4>
@@ -102,7 +108,7 @@ const Hot = () => {
   )}
             />
           </div>
-
+{/* color section or div */}
           <div className="colors">
             <h1>COLOR</h1>
            <div class="palette">
@@ -114,6 +120,7 @@ const Hot = () => {
         <div class="dot pink"></div>
     </div>
           </div>
+          {/* brands container */}
           <div className="brands">
             <h1>BRAND</h1>
             <div className="brandlist">
@@ -131,9 +138,11 @@ const Hot = () => {
               </div>
             </div>
           </div>
+          {/* more button */}
           <button>MORE</button>
         </div>
         </div>
+        {/* product side */}
         <div className="product-side">
           <div className="secondAdvert">
             <div className="texts">
@@ -144,6 +153,7 @@ const Hot = () => {
 
             <img src={advertpic} alt="" className="adpic" />
           </div>
+          {/*  filter bar*/}
           <div className="bar">
             <div className="leftbar">
               <p>13 Items</p>
@@ -198,6 +208,7 @@ const Hot = () => {
               </div>
             </div>
           </div>
+          {/* product grids */}
           <section className="hotgrid">
             <ProductCard
               image={image1}
@@ -272,6 +283,9 @@ const Hot = () => {
               rating={4}
             />
           </section>
+
+          {/* buttons of current section in view */}
+
           <div className="numbers flex justify-center">
             <div className="setnumb flex">
               <Colored label={1} />
@@ -283,6 +297,7 @@ const Hot = () => {
           </div>
         </div>
       </div>
+      {/* filter button */}
       <button
         className="filter-toggle"
         onClick={toggleSidebar}

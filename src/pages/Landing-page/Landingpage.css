@@ -26,6 +26,8 @@ main {
   width: 100%;
 }
 
+/* hero-section products */
+
 .display {
   background-image: url("../../assets/Promotion\ Image\ \(1\).png");
   background-position: center;
@@ -263,6 +265,7 @@ del {
   text-decoration: line-through;
 }
 
+/* responsiveness */
 
 @media (max-width: 1250px) {
 .display h1 {

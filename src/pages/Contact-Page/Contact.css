@@ -6,6 +6,7 @@
   gap: 134.43px;
 }
 
+/* contact card */
 .contact-card {
   display: flex;
   width: 86.67%;
@@ -78,6 +79,8 @@
   letter-spacing: 0px;
   width: 200px;
 }
+
+/* contact form */
 
 .formcol {
   width: 100%;
@@ -175,6 +178,7 @@ button[type="submit"]:hover {
   background-color: #ccc;
   cursor: not-allowed;
 }
+/* animation */
 
 @keyframes fadeIn {
   from {
@@ -192,6 +196,8 @@ button[type="submit"]:hover {
         padding-inline: 20px;
     }  
 }
+
+/* reponsiveness */
 
 @media (max-width: 1100px) {
   .contact-card {
