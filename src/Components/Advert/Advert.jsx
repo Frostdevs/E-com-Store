@@ -29,7 +29,7 @@ const Advert = () => {
           <p>Performance and design. Taken right to the edge.</p>
           <button className="shop">
             <h4>SHOP NOW</h4>
-            <span class="line"></span>
+            <span className="line"></span>
           </button>
         </div>
         <img src={advertpic} alt="" className="advertpic" />

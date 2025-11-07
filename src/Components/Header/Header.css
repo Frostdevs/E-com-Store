@@ -86,7 +86,7 @@ li:hover {
   position: relative;
 }
 
-/* Hide dropdown by default */
+
 .dropdown-menu {
     position: fixed;
   top: 140px; 
@@ -105,7 +105,6 @@ li:hover {
   z-index: 100;
 }
 
-/* Show on hover */
 .navlinks:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -140,9 +139,6 @@ display: flex;
 flex-direction: column;
 gap: 14px;
 }
-
-
-
 
 .hamburger {
   display: none;
@@ -250,16 +246,22 @@ gap: 14px;
 }
 
 @media (max-width: 585px) {
-.top-menu {
+.profile {
   display: none;
 }
-.divider {
+.about h5 {
   display: none;
+}
+.about {
+  gap: 16px;
 }
 }
 
 @media (max-width: 400px) {
   .Header {
     padding-inline: 20px;
+  }
+  .Lang p {
+    font-size: 12px;
   }
 }

@@ -5,10 +5,10 @@ const CartContext = createContext();
 
 export const useCart = () => {
   const context = useContext(CartContext);
-  if (!context) {
-    throw new Error('useCart must be used within CartProvider');
-  }
-  return context;
+  // if (!context) {
+  //   throw new Error('useCart must be used within CartProvider');
+  // }
+  // return context;
 };
 
 export const CartProvider = ({ children }) => {
@@ -16,24 +16,24 @@ export const CartProvider = ({ children }) => {
   const [alert, setAlert] = useState({ show: false, message: '', type: '' });
   const shippingFee = 20;
 
-  // Show alert for 3 seconds
+  
   const showAlert = (message, type) => {
     setAlert({ show: true, message, type });
     setTimeout(() => setAlert({ show: false, message: '', type: '' }), 3000);
   };
 
-  // Get total number of items in cart
+
   const getTotalItems = () => {
     return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
-  // Generate unique cart ID from product data
+ 
   const getCartId = (product, index) => {
-    // Create a unique ID using title and index
+    
     return `${product.title}-${index}`.replace(/\s+/g, '-').toLowerCase();
   };
 
-  // Add product to cart (with index)
+ 
   const addToCart = (product, index) => {
     const cartId = getCartId(product, index);
     const existingItem = cartItems.find(item => item.cartId === cartId);
@@ -53,7 +53,7 @@ export const CartProvider = ({ children }) => {
     showAlert(`${product.title} added to cart`, 'success');
   };
 
-  // Update quantity using cartId
+
   const updateQuantity = (cartId, newQuantity) => {
     if (newQuantity < 1) return;
     
@@ -65,19 +65,19 @@ export const CartProvider = ({ children }) => {
     showAlert('Cart updated successfully', 'success');
   };
 
-  // Remove item from cart using cartId
+ 
   const removeItem = (cartId) => {
     const item = cartItems.find(i => i.cartId === cartId);
     setCartItems(prev => prev.filter(item => item.cartId !== cartId));
     showAlert(`${item.title} removed from cart`, 'error');
   };
 
-  // Calculate subtotal
+ 
   const calculateSubtotal = () => {
     return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
   };
 
-  // Calculate total
+ 
   const calculateTotal = () => {
     return calculateSubtotal() + shippingFee;
   };

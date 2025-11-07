@@ -105,11 +105,14 @@ const Hot = () => {
 
           <div className="colors">
             <h1>COLOR</h1>
-            <div className="colors">
-              <div>
-                <span className="blue"></span>
-              </div>
-            </div>
+           <div class="palette">
+        <div class="dot blue"></div>
+        <div class="dot red"></div>
+        <div class="dot black"></div>
+        <div class="dot yellow"></div>
+        <div class="dot magenta"></div>
+        <div class="dot pink"></div>
+    </div>
           </div>
           <div className="brands">
             <h1>BRAND</h1>

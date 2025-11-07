@@ -319,3 +319,15 @@ del {
   width: 100%;
 }
 }
+
+@media (max-width: 400px) {
+.display h1 {
+  font-size: 28px;
+}
+}
+
+@media (max-width: 350px) {
+.contF {
+  flex-direction: column;
+}
+}

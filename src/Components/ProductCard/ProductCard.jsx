@@ -1,7 +1,10 @@
 
 import "./ProductCard.css";
 import React, { useState } from 'react';
+import { CiHeart } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
+import { useEffect } from 'react';
+import { Heart } from 'lucide-react';
 
 
 const ProductCard = ({ image, title, price, originalPrice, isHot, rating }) => {
@@ -9,18 +12,24 @@ const ProductCard = ({ image, title, price, originalPrice, isHot, rating }) => {
     <span key={i}>{i < rating ? "★" : "☆"}</span>
   ));
 
-    const [fillColor, setFillColor] = useState('none');
+  const [isFavorite, setIsFavorite] = useState(false);
+
+   const [showMessage, setShowMessage] = useState(false);
 
   const handleClick = () => {
-    setFillColor(prev => (prev === 'none' ? 'red' : 'none'));
+    setIsFavorite(!isFavorite);
+    setShowMessage(true);
+    
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 2000);
   };
 
-
   return (
-    <NavLink to="/product"   className="goods-card">
+    <div className="goods-card">
       {isHot && <div className="hot-label">HOT</div>}
       <img src={image} alt={title} className="product-image" />
-      <div className="descript">
+      <NavLink to="/product" className="descript">
         <h3>{title}</h3>
         <div className="stars">{stars}</div>
         <div className="prices-section">
@@ -28,25 +37,27 @@ const ProductCard = ({ image, title, price, originalPrice, isHot, rating }) => {
           <span className="original-price">${originalPrice}</span>
           <span className="discount">24% off</span>
         </div>
-      </div>
+      </NavLink>
+        {showMessage && (
+        <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 mt-4
+          px-6 py-3 rounded-lg shadow-lg text-white font-medium z-50
+          ${isFavorite ? 'bg-red-500' : 'bg-gray-500'}
+          ${showMessage ? 'animate-slide-down' : ''}`}
+        >
+          {isFavorite ? 'Added to favorites' : 'Removed from favorites'}
+        </div>
+      )}
       <div className="overlay">
         <div className="actions">
-          <div className="favorite" >
-            <svg
-              width="18"
-              height="16"
-              viewBox="0 0 18 16"
-              fill={fillColor}
-               onClick={handleClick}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M12.2345 2.22999C12.8783 2.23065 13.5083 2.41714 14.0487 2.7671C14.5891 3.11706 15.017 3.6156 15.281 4.20283C15.545 4.79005 15.6339 5.44103 15.5369 6.07752C15.44 6.71402 15.1613 7.30896 14.7345 7.79096C14.1215 8.48196 8.89452 13.375 8.89452 13.375C8.89452 13.375 3.65651 8.48198 3.04351 7.77998C2.50231 7.17251 2.20459 6.38657 2.20751 5.57301C2.22267 4.69627 2.58158 3.86051 3.20696 3.24586C3.83234 2.6312 4.67415 2.28681 5.55101 2.28681C6.42788 2.28681 7.26963 2.6312 7.89501 3.24586C8.52039 3.86051 8.87936 4.69627 8.89452 5.57301C8.89452 5.13387 8.98099 4.699 9.14904 4.29328C9.31709 3.88757 9.56343 3.51896 9.87395 3.20844C10.1845 2.89792 10.5531 2.65158 10.9588 2.48353C11.3645 2.31548 11.7994 2.22901 12.2385 2.22901L12.2345 2.22999ZM12.2385 8.44508e-06C11.0322 -0.00209654 9.85817 0.389363 8.89452 1.115C7.79056 0.295615 6.42266 -0.08681 5.05382 0.0412682C3.68499 0.169346 2.41179 0.798889 1.47899 1.80885C0.546201 2.8188 0.0196472 4.1379 0.00053885 5.51258C-0.0185695 6.88726 0.471117 8.2205 1.37548 9.25599C2.00148 9.97399 6.12448 13.834 7.37548 15C7.7884 15.3862 8.33265 15.601 8.898 15.601C9.46335 15.601 10.0075 15.3862 10.4205 15C11.6645 13.835 15.7705 9.98501 16.4045 9.26801C17.1158 8.46448 17.58 7.47265 17.7413 6.41169C17.9026 5.35073 17.7542 4.26576 17.3138 3.28712C16.8735 2.30848 16.1599 1.47777 15.2588 0.894845C14.3578 0.311917 13.3076 0.00153405 12.2345 0.000985008L12.2385 8.44508e-06Z"
-                fill="#33A0FF"
-              />
-            </svg>
+          <div className="favorite" onClick={handleClick}>
+             <Heart
+            size={18}
+            className={`transition-all duration-300 ${
+              isFavorite 
+                ? 'fill-red-500 stroke-red-500 scale-110' 
+                : 'stroke-blue-400 hover:stroke-gray-600'
+            }`}
+          />
           </div>
           <div className="addcart" onClick={() => handleAddToCart(title)}>
             <svg
@@ -66,7 +77,7 @@ const ProductCard = ({ image, title, price, originalPrice, isHot, rating }) => {
           </div>
         </div>
       </div>
-    </NavLink>
+    </div>
   );
 };
 export default ProductCard;

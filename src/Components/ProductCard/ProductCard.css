@@ -20,8 +20,8 @@
   position: relative;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-   animation: fadeIn 1s ease-in;
-   cursor: pointer;
+  animation: fadeIn 1s ease-in;
+  cursor: pointer;
 }
 
 .product-image {
@@ -30,8 +30,6 @@
   object-fit: cover;
   position: relative;
 }
-
-
 
 .hot-label {
   position: absolute;
@@ -49,16 +47,16 @@
 }
 
 .descript {
- padding-inline: 42px;
+  padding-inline: 42px;
 }
 
 .descript h3 {
-    color: rgba(34, 50, 99, 1);
-    margin-top: 10px;
-font-weight: 700;
-font-size: 18px;
-line-height: 150%;
-letter-spacing: 0.5px;
+  color: rgba(34, 50, 99, 1);
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
 }
 
 .pricetag {
@@ -82,45 +80,73 @@ letter-spacing: 0.5px;
 }
 
 .discount {
-font-weight: 700;
-font-size: 14px;;
-line-height: 150%;
-letter-spacing: 0.5px;
-color: rgba(251, 113, 129, 1);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  color: rgba(251, 113, 129, 1);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    opacity: 0;
-    padding: 82px;
-    background-color: rgba(255, 255, 255, 1);
-    transition: opacity 0.5s ease;
-    top: 28px;
-    left: 10px;
-    right: 10px;
-     height: calc(60% - 20px)
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  padding: 82px;
+  background-color: rgba(255, 255, 255, 1);
+  transition: opacity 0.5s ease;
+  top: 15px;
+  left: 10px;
+  right: 10px;
+  height: calc(60% - 20px);
 }
 
 .goods-card:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .actions {
-    display: flex;
-    gap: 11px;
+  display: flex;
+  gap: 11px;
 }
 
-.favorite , .addcart {
-    padding: 17px;
-    border: 2px rgba(51, 160, 255, 0.25) solid;
-    border-radius: 50%;
+.favorite,
+.addcart {
+  padding: 17px;
+  border: 2px rgba(51, 160, 255, 0.25) solid;
+  border-radius: 50%;
+}
+
+.heart {
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  color: #33a0ff;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    top: -100px;
+  }
+  to {
+    opacity: 1;
+    top: 16px;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.4s ease-out;
 }

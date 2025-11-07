@@ -137,6 +137,16 @@ margin-bottom: 134px;
   border-bottom: 2.13px #f6f7f8 solid;
 }
 
+.color{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.col {
+  display: flex;
+  gap: 17px;
+}
+
 .sizes {
   display: flex;
   align-items: center;
