@@ -1,11 +1,9 @@
-
 import "./ProductCard.css";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { CiHeart } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
-import { useEffect } from 'react';
-import { Heart } from 'lucide-react';
-
+import { useEffect } from "react";
+import { Heart } from "lucide-react";
 
 const ProductCard = ({ image, title, price, originalPrice, isHot, rating }) => {
   const stars = Array.from({ length: 5 }, (_, i) => (
@@ -14,12 +12,12 @@ const ProductCard = ({ image, title, price, originalPrice, isHot, rating }) => {
 
   const [isFavorite, setIsFavorite] = useState(false);
 
-   const [showMessage, setShowMessage] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
   const handleClick = () => {
     setIsFavorite(!isFavorite);
     setShowMessage(true);
-    
+
     setTimeout(() => {
       setShowMessage(false);
     }, 2000);
@@ -38,26 +36,27 @@ const ProductCard = ({ image, title, price, originalPrice, isHot, rating }) => {
           <span className="discount">24% off</span>
         </div>
       </NavLink>
-        {showMessage && (
-        <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 mt-4
-          px-6 py-3 rounded-lg shadow-lg text-white font-medium z-50
-          ${isFavorite ? 'bg-red-500' : 'bg-gray-500'}
-          ${showMessage ? 'animate-slide-down' : ''}`}
+      {showMessage && (
+        <div
+          className={`messagecont fixed top-36 left-1/2  mt-4  transform -translate-x-1/2 
+          px-8 py-3  shadow-lg text-white font-medium z-150
+          ${isFavorite ? "bg-red-400" : "bg-gray-500"}
+          `}
         >
-          {isFavorite ? 'Added to favorites' : 'Removed from favorites'}
+          {isFavorite ? "Added to favorites" : "Removed from favorites"}
         </div>
       )}
       <div className="overlay">
         <div className="actions">
           <div className="favorite" onClick={handleClick}>
-             <Heart
-            size={18}
-            className={`transition-all duration-300 ${
-              isFavorite 
-                ? 'fill-red-500 stroke-red-500 scale-110' 
-                : 'stroke-blue-400 hover:stroke-gray-600'
-            }`}
-          />
+            <Heart
+              size={18}
+              className={`transition-all duration-300 ${
+                isFavorite
+                  ? "fill-red-500 stroke-red-500 scale-110"
+                  : "stroke-blue-400 hover:stroke-gray-600"
+              }`}
+            />
           </div>
           <div className="addcart" onClick={() => handleAddToCart(title)}>
             <svg
@@ -82,10 +81,6 @@ const ProductCard = ({ image, title, price, originalPrice, isHot, rating }) => {
 };
 export default ProductCard;
 
-
-
-
 const handleAddToWishlist = (title) => {
   console.log(`Added ${title} to wishlist`);
- 
 };
