@@ -40,8 +40,10 @@ const Hot = () => {
       <Header />
       <Crumbs text="Hot Deal" />
       <div className="deal">
-        <div className={`sidebar ${isSidebarOpen ? 'active' : ''}`}>
+        <div className={`sidebarCont ${isSidebarOpen ? 'active' : ''}`}>
           <FaTimes className="cancel hidden" onClick={closeSidebar} />
+
+        <div className="sidebar">
           <div className="selections">
             <h2 className=" flex justify-between">Hot Deals </h2>
             <div className="cats">
@@ -127,6 +129,7 @@ const Hot = () => {
             </div>
           </div>
           <button>MORE</button>
+        </div>
         </div>
         <div className="product-side">
           <div className="secondAdvert">

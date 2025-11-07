@@ -353,17 +353,23 @@
     left: 250px;
   }
 
-  .sidebar {
-    position: fixed;
+  .sidebarCont {
+     position: fixed;
     left: 0;
     top: 0;
     z-index: 1000;
     background-color: white;
-    padding: 40px 20px;
+    padding: 30px 20px;
     width: 60%;
     height: 100vh;
     visibility: hidden;
     box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    height: 100%;
     overflow-y: auto;
     scrollbar-width: thin;
   }
@@ -371,9 +377,10 @@
     display: block;
     font-size: 20px;
     margin-left: auto;
+    margin-bottom: 20px;
   }
 
-  .sidebar.active {
+  .sidebarCont.active {
     visibility: visible;
   }
   .filter-toggle {
