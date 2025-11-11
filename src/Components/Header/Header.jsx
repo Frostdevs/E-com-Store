@@ -103,51 +103,15 @@ const Header = () => {
 
        
         <ul className={`links ${isMenuOpen ? "active" : ""}`}>
-          <li>
+          <li  >
             <NavLink
               to="/"
               style={({ isActive }) => navLinks(isActive)}
               onClick={closeMenu}
-              className="home"
+              className="homelink"
             >
               HOME
-            </NavLink>
-          </li>
-          <li>
-            <a href="#" onClick={closeMenu}>
-              BAG
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={closeMenu}>
-              SNEAKERS
-            </a>
-          </li>
-          <li>
-            <a href="#" onClick={closeMenu}>
-              BELT
-            </a>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              style={({ isActive }) => navLinks(isActive)}
-              onClick={closeMenu}
-            >
-              CONTACT
-            </NavLink>
-          </li>
-
-          {isMenuOpen && (
-            <li>
-              <NavLink to="/hot" className="hotlink hidden">
-                Hot Deal
-              </NavLink>
-            </li>
-          )}
-        </ul>
-
-        <div className="dropdown-menu">
+           <div className="dropdown-menu">
           <div className="hover-cont">
             <div className="category">
               <h1>Category</h1>
@@ -203,6 +167,43 @@ const Header = () => {
             </div>
           </div>
         </div>
+            </NavLink>
+          </li>
+          <li>
+            <a href="#" onClick={closeMenu}>
+              BAG
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={closeMenu}>
+              SNEAKERS
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={closeMenu}>
+              BELT
+            </a>
+          </li>
+          <li>
+            <NavLink
+              to="/contact"
+              style={({ isActive }) => navLinks(isActive)}
+              onClick={closeMenu}
+            >
+              CONTACT
+            </NavLink>
+          </li>
+
+          {isMenuOpen && (
+            <li>
+              <NavLink to="/hot" className="hotlink hidden">
+                Hot Deal
+              </NavLink>
+            </li>
+          )}
+       
+        </ul>
+
       </div>
     </motion.div>
   );
